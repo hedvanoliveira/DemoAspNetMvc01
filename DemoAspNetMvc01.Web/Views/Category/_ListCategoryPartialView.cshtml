@@ -1,0 +1,9 @@
+﻿@model IEnumerable<DemoAspNetMvc01.Domain.Model.Category>
+
+<p>Categories</p>
+<ul>
+    @foreach(var item in Model)
+    { 
+        <li>@Html.ActionLink(item.Title, "Index", "Post", new { category_id = item.Id }, null)</li>
+    }
+</ul>
